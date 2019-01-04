@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>ErikTheCoder.ServiceContract</RootNamespace>
+    <AssemblyName>ErikTheCoder.ServiceContract</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Erik Madsen</Authors>
+    <Description>Code shared between services and clients.</Description>
+    <Copyright>2019</Copyright>
+    <PackageProjectUrl>https://github.com/ekmadsen/ServiceContract</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ekmadsen/ServiceContract</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>http-headers</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+  </ItemGroup>
+
+</Project>

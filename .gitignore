@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/Service Contract/.vs/Service Contract
+/Service Contract/bin
+/Service Contract/obj
+/Service Contract.sln.DotSettings.user
