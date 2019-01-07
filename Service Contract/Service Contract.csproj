@@ -11,7 +11,8 @@
     <PackageProjectUrl>https://github.com/ekmadsen/ServiceContract</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ekmadsen/ServiceContract</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <PackageTags>http-headers</PackageTags>
+    <PackageTags>http-headers environment</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
