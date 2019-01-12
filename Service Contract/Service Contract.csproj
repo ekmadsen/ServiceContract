@@ -12,10 +12,15 @@
     <RepositoryUrl>https://github.com/ekmadsen/ServiceContract</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>http-headers</PackageTags>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+    <PackageReference Include="NuGet.CommandLine" Version="4.9.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
