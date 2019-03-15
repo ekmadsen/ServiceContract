@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 
 
@@ -13,5 +14,9 @@ namespace ErikTheCoder.ServiceContract
             Key = Tuple.Key;
             Value = Tuple.Value;
         }
+
+
+        [UsedImplicitly]
+        public static string RemoveControlCharacters(this string Text) => Regex.Replace(Text, @"[\p{C}-[\r\n\t]]+", string.Empty);
     }
 }
