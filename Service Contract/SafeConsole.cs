@@ -9,7 +9,7 @@ namespace ErikTheCoder.ServiceContract
     [UsedImplicitly]
     public static class SafeConsole
     {
-        private const string _elapsedSecondsFormat = "00:000";
+        private const string _elapsedSecondsFormat = "000.000";
         private const string _threadIdFormat = "00";
         private static readonly object _lock = new object();
 
