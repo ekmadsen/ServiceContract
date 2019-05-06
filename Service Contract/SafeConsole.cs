@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 namespace ErikTheCoder.ServiceContract
 {
     // This class writes to the console in a thread-safe manner.
+    // TODO: Determine how to provide async methods. See https://stackoverflow.com/questions/22664392/await-console-readline.
     [UsedImplicitly]
     public static class SafeConsole
     {
@@ -47,6 +48,26 @@ namespace ErikTheCoder.ServiceContract
                 Console.ForegroundColor = Color;
                 Console.WriteLine($"{elapsed}Thread{System.Threading.Thread.CurrentThread.ManagedThreadId.ToString(_threadIdFormat)}  {Message}");
                 Console.ResetColor();
+            }
+        }
+
+
+        [UsedImplicitly]
+        public static int Read()
+        {
+            lock (_lock)
+            {
+                return Console.Read();
+            }
+        }
+
+
+        [UsedImplicitly]
+        public static string ReadLine()
+        {
+            lock (_lock)
+            {
+                return Console.ReadLine();
             }
         }
     }
