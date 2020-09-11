@@ -48,8 +48,8 @@ namespace ErikTheCoder.ServiceContract
                 new Claim(CustomClaimType.SecurityToken, SecurityToken ?? string.Empty)
             };
             // Include roles and claims.
-            foreach (string role in Roles) claims.Add(new Claim(ClaimTypes.Role, role));
-            foreach ((string claimType, HashSet<string> claimValues) in Claims) foreach (string claimValue in claimValues) claims.Add(new Claim(claimType, claimValue));
+            foreach (var role in Roles) claims.Add(new Claim(ClaimTypes.Role, role));
+            foreach (var (claimType, claimValues) in Claims) foreach (var claimValue in claimValues) claims.Add(new Claim(claimType, claimValue));
             return claims;
         }
 
@@ -57,8 +57,8 @@ namespace ErikTheCoder.ServiceContract
         [UsedImplicitly]
         public static User ParseClaims(IEnumerable<Claim> Claims)
         {
-            User user = new User();
-            foreach (Claim claim in Claims)
+            var user = new User();
+            foreach (var claim in Claims)
             {
                 // ReSharper disable once SwitchStatementMissingSomeCases
                 switch (claim.Type)
