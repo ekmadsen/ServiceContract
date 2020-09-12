@@ -38,7 +38,7 @@ namespace ErikTheCoder.ServiceContract
         [UsedImplicitly]
         public List<Claim> GetClaims()
         {
-            List<Claim> claims = new List<Claim>
+            var claims = new List<Claim>
             {
                 // Include user properties.
                 new Claim(ClaimTypes.Name, Username),
