@@ -8,21 +8,21 @@ using JetBrains.Annotations;
 namespace ErikTheCoder.ServiceContract
 {
     [UsedImplicitly]
-    public class User
+    public class User : IUser
     {
         // ReSharper disable MemberCanBePrivate.Global
         // ReSharper disable UnusedMember.Global
-        public int Id { get; [UsedImplicitly] set; }
-        public string Username { get; [UsedImplicitly] set; }
-        public int PasswordManagerVersion { get; [UsedImplicitly] set; }
-        public string Salt { get; [UsedImplicitly] set; }
-        public string PasswordHash { get; [UsedImplicitly] set; }
-        public string EmailAddress { get; [UsedImplicitly] set; }
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public int PasswordManagerVersion { get; set; }
+        public string Salt { get; set; }
+        public string PasswordHash { get; set; }
+        public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string DisplayName => $"{FirstName} {LastName}";
-        public HashSet<string> Roles { get; [UsedImplicitly] set; }
-        public Dictionary<string, HashSet<string>> Claims { get; [UsedImplicitly] set; }
+        public HashSet<string> Roles { get; set; }
+        public Dictionary<string, HashSet<string>> Claims { get; set; }
         public string SecurityToken { get; set; }
         // ReSharper restore UnusedMember.Global
         // ReSharper restore MemberCanBePrivate.Global
